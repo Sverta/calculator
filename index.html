@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="calculatorApp">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-controller="numberController">
+
+<div class="container text-center allCalc" id="calc">
+
+        <div class="row" id="result">
+            <form name="calc">
+                <label for="result"></label>
+                <!--<input type="number" class="screen text-right" ng-model="output" name="result">-->
+                <p class="screen text-right" >{{output}}</p>
+            </form>
+        </div>
+        <div class="">
+            <button type="button" class="btn btn-danger allClear" ng-click="clear()">AC</button>
+            <!--<button type="button" class="btn btn-warning clearCalc">CE</button>-->
+            <button type="button" class="btn">%</button>
+            <button type="button" class="btn">÷</button>
+            <button type="button" class="btn" ng-click="mul()">x</button>
+        </div>
+    <div class="listNumWidth">
+        <div class="listNum"  ng-repeat="item in items">
+            <button type="button" class="btn" ng-click="numberOutput(item.number)">{{item.number}}</button>
+        </div>
+    </div>
+    <div class="listOper">
+        <button type="button" class="btn " ng-click="minus()">-</button>
+        <button type="button" class="btn " ng-click="sum()">+</button>
+        <button type="button" class="btn ">.</button>
+        <button type="button" class="btn equalsCalc" ng-click="result()">=</button>
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="public/main.js"></script>
+</body>
+</html>

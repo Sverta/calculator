@@ -1,0 +1,54 @@
+.allCalc{
+    background-color: rgba(128, 128, 128, 0.56);
+    display: inline-block;
+    padding: 25px;
+    /*width: 190px;*/
+    border-radius: 25px;
+}
+input{
+    border: none;
+}
+button {
+    height: 50px;
+    width: 50px;
+    margin: 10px 4px;
+    box-shadow: inset 1px 1px 50px  #0066FF;
+    border: none !important;
+}
+*:focus {
+    outline: 0 !important;
+}
+.allClear {
+    box-shadow: inset 1px 1px 50px  #990000;
+    border: none;
+}
+.clearCalc {
+    box-shadow: inset 1px 1px 50px  #CC6600;
+    border: none;
+}
+.equalsCalc{
+    box-shadow: inset 1px 1px 50px #006633;
+    border: none;
+}
+
+.screen {
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 2px;
+    font-size: 16px;
+    font-weight: bold;
+
+    background: #efefef;
+}
+.listNum {
+    display: inline-block;
+}
+.listNumWidth {
+    width: 186px;
+    float: left;
+}
+.listOper {
+    display: inline-flex;
+    flex-direction: column;
+}
