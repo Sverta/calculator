@@ -58,6 +58,7 @@ calculatorApp.controller("numberController", function ($scope) {
     $scope.clear = function () {
         $scope.output = 0;
         $scope.running = 0;
+        $scope.running2 = 0;
         $scope.res = 0;
     };
 
@@ -80,7 +81,6 @@ calculatorApp.controller("numberController", function ($scope) {
             $scope.running += $scope.pendingValue;
             $scope.running = -$scope.running;
         }
-        //console.log($scope.pendingValue[1]);
         $scope.newNumber = true;
         $scope.pendingValue = null;
         $scope.pendingOperation = '-';
@@ -88,23 +88,33 @@ calculatorApp.controller("numberController", function ($scope) {
     $scope.mul = function () {
         if ($scope.pendingValue) {
             $scope.pendingValue = Number($scope.output);
-
-            $scope.running = $scope.pendingValue;
-            console.log($scope.running);
-
-            $scope.running = $scope.running * $scope.pendingValue;
-            console.log($scope.running);
-
-
-           // $scope.running += $scope.pendingValue *$scope.running ;
-          //  $scope.running += $scope.running;
-         // $scope.running *= $scope.running;//
-
-
+            $scope.running2 += $scope.pendingValue;
+            $scope.running = $scope.pendingValue * ($scope.running2 - $scope.pendingValue);
         }
         $scope.newNumber = true;
         $scope.pendingValue = null;
         $scope.pendingOperation = '*';
+    };
+    $scope.div = function () {
+        if ($scope.pendingValue) {
+            $scope.pendingValue = Number($scope.output);
+            $scope.running2 += $scope.pendingValue;
+            $scope.running = ($scope.running2 - $scope.pendingValue) / $scope.pendingValue;
+        }
+        $scope.newNumber = true;
+        $scope.pendingValue = null;
+        $scope.pendingOperation = '/';
+    };
+    $scope.pro = function () {
+
+        if ($scope.pendingValue) {
+            $scope.pendingValue = Number($scope.output);
+            $scope.running = $scope.pendingValue / 100;
+            $scope.output = $scope.running;
+        }
+        $scope.newNumber = true;
+        $scope.pendingValue = null;
+        $scope.pendingOperation = '%';
     }
     $scope.result = function () {
 
@@ -117,6 +127,9 @@ calculatorApp.controller("numberController", function ($scope) {
             $scope.res = $scope.running;
         }else if( $scope.pendingOperation == '*'){
             $scope.mul();
+            $scope.res = $scope.running;
+        }else if( $scope.pendingOperation == '/'){
+            $scope.div();
             $scope.res = $scope.running;
         }
         $scope.output = $scope.res;
