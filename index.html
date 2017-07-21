@@ -3,6 +3,13 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.min.css">
 </head>
 <body ng-controller="numberController">
 <div class="colorPannel">
@@ -10,8 +17,8 @@
     <span ng-repeat="n in colors" class="colorPannelCircle" ng-style="styleColor={'background-color': n.color}" ng-click="color()"></span>
 </div>
 
-<div class="allCalc" ng-style="changeColor" id="calc">
-    <div class="row" id="result">
+<div class="allCalc jumbotron" ng-style="changeColor" id="calc">
+    <div id="result">
         <form name="calc">
             <label for="result"></label>
             <!--<input type="number" class="screen text-right" ng-model="output" name="result">-->
@@ -19,29 +26,47 @@
         </form>
     </div>
     <div class="">
-        <button type="button" class="btn btn-danger allClear" ng-click="clear()">AC</button>
-        <!--<button type="button" class="btn btn-warning clearCalc">CE</button>-->
-        <button type="button" class="btn" ng-click="pro()">%</button>
-        <button type="button" class="btn" ng-click="div()">÷</button>
-        <button type="button" class="btn" ng-click="mul()">x</button>
+        <a href="javascript:void(0)" class="btn btn-raised allClear" ng-click="clear()">AC</a>
+        <a href="javascript:void(0)" class="btn btn-raised" ng-click="div()">&#177;</a>
+        <a href="javascript:void(0)" class="btn btn-raised" ng-click="mul()">&#215;</a>
+        <a href="javascript:void(0)" class="btn btn-raised" ng-click="">&#8730;</a>
     </div>
     <div class="listNumWidth">
         <div class="listNum" ng-repeat="item in items">
-            <button type="button" class="btn" ng-click="numberOutput(item.number)" ng-style="changeColorButton">
-                {{item.number}}
-            </button>
+            <a href="javascript:void(0)" class="btn btn-raised"  ng-click="numberOutput(item.number)">{{item.number}}</a>
+
+            <!--<button type="button" class="btn" ng-click="numberOutput(item.number)" ng-style="changeColorButton">-->
+                <!--{{item.number}}-->
+            <!--</button>-->
         </div>
+        <a href="javascript:void(0)" class="btn  btn-raised" ng-click="">.</a>
     </div>
     <div class="listOper">
-        <button type="button" class="btn " ng-click="minus()">-</button>
-        <button type="button" class="btn " ng-click="sum()">+</button>
+        <!--<a href="javascript:void(0)" class="btn btn-raised" ng-click="pro()">%</a>-->
+
         <!--<button type="button" class="btn ">.</button>-->
-        <button type="button" class="btn equalsCalc" ng-click="result()">=</button>
+
+    <!--</div>-->
+    <!--<div class="listOper">-->
+        <a href="javascript:void(0)" class="btn btn-raised" ng-click="minus()">-</a>
+        <a href="javascript:void(0)" class="btn  btn-raised" ng-click="sum()">+</a>
+        <a href="javascript:void(0)" class="btn btn-raised" ng-click="div()">÷</a>
+        <a href="javascript:void(0)" class="btn equalsCalc" ng-click="result()">=</a>
+        <!--<button type="button" class="btn ">.</button>-->
+
     </div>
 </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
 <script src="public/main.js"></script>
 </body>
 </html>

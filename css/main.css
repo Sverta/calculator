@@ -1,68 +1,77 @@
 .allCalc{
-    background-color: rgba(128, 128, 128, 0.56);
+    background-color: #ebebeb;
+    background-image: url("https://www.transparenttextures.com/patterns/real-carbon-fibre.png");
     display: inline-block;
-    padding: 25px;
-    /*width: 190px;*/
-    border-radius: 25px;
+    box-shadow: 0 0 15px #5B5B5B;
+    padding: 5px 20px 20px !important;
 }
 input{
     border: none;
 }
-button {
-    height: 50px;
-    width: 50px;
-    margin: 10px 4px;
+.btn {
+    height: 40px;
+    width: 40px;
+    line-height: 40px !important;
+    padding: 0 !important;
+    margin: 5px !important;
+    background: rgb(69,72,77); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%) !important; /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+    color: #fff !important;
     /*box-shadow: inset 1px 1px 50px  #0066FF;*/
-    border: none !important;
+    border: none ;
+
+}
+.btn:hover, .btn:focus{
+    background: rgb(0,0,0); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(69,72,77,1) 100%)!important; /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(69,72,77,1) 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(69,72,77,1) 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#45484d',GradientType=0 );
 }
 *:focus {
     outline: 0 !important;
 }
-.allClear {
-    box-shadow: inset 1px 1px 50px  #990000;
-    border: none;
-}
-.clearCalc {
-    box-shadow: inset 1px 1px 50px  #CC6600;
-    border: none;
-    text-align: center;
-}
-.equalsCalc {
-    box-shadow: inset 1px 1px 50px #006633;
-    border: none;
-}
 
 .screen {
-    height: 40px;
-    border-radius: 10px;
+    /*height: 40px;*/
     padding: 10px;
     margin: 10px 2px;
     font-size: 16px;
     font-weight: bold;
-
-    background: #efefef;
+    border: 2px inset rgba(114, 114, 113, 0.4);
+    max-width: 205px;
+    overflow: hidden;
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 50%, rgba(237,237,237,1) 51%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(243,243,243,1) 50%,rgba(237,237,237,1) 51%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 .listNum {
     display: inline-block;
-}
-.listNumWidth {
-    width: 186px;
     float: left;
 }
-.listOper {
-    display: inline-flex;
-    flex-direction: column;
+.listNumWidth {
+    max-width: 150px;
+    float: left;
 }
-.colorPannel > p{
-    font-size: 15px;
-    font-weight: bold;
-}
-.colorPannelCircle {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    margin: 3px;
-}
-.colorPannelCircle {
-    display: inline-block;
-}
+/*.listOper {*/
+    /*display: inline-flex;*/
+    /*flex-direction: column;*/
+/*}*/
+/*.colorPannel > p{*/
+    /*font-size: 15px;*/
+    /*font-weight: bold;*/
+/*}*/
+/*.colorPannelCircle {*/
+    /*width: 25px;*/
+    /*height: 25px;*/
+    /*border-radius: 50%;*/
+    /*margin: 3px;*/
+/*}*/
+/*.colorPannelCircle {*/
+    /*display: inline-block;*/
+/*}*/
