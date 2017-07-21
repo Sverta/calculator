@@ -15,6 +15,23 @@ calculatorApp.controller("numberController", function ($scope) {
         { number: 9},
         { number: 0}
     ];
+    $scope.colors = [
+        {color: '#000'},
+        {color: '#DDA0DD', colorbutton: '#FF69B4'},
+        {color: '#4B0082', colorbutton: '#FFFF00'},
+        {color: '#696969', colorbutton: '#DCDCDC'},
+        {color: '#006400', colorbutton: '#00FF00'},
+        {color: '#00008B', colorbutton: '#00FFFF'},
+        {color: '#FF69B4', colorbutton: '#fff'},
+        {color: '#8A2BE2', colorbutton: '#FF69B4'},
+        {color: '#A0522D', colorbutton: '#DEB887'}
+    ];
+    $scope.color = function () {
+        $scope.changeColor = {'background-color':this.n.color};
+        $scope.changeColorButton = {'background-color':this.n.colorbutton}
+    }
+
+  //  $scope.backColorPannel = {'background-color':n.color};
     $scope.output = 0;
     $scope.newNumber = true;
     $scope.pendingValue = null;
@@ -71,14 +88,17 @@ calculatorApp.controller("numberController", function ($scope) {
     $scope.mul = function () {
         if ($scope.pendingValue) {
             $scope.pendingValue = Number($scope.output);
-            $scope.running = $scope.pendingValue;
 
+            $scope.running = $scope.pendingValue;
             console.log($scope.running);
 
-            $scope.running *= $scope.running;
-           console.log($scope.running);
+            $scope.running = $scope.running * $scope.pendingValue;
+            console.log($scope.running);
 
-          //  $scope.running *= $scope.running;//
+
+           // $scope.running += $scope.pendingValue *$scope.running ;
+          //  $scope.running += $scope.running;
+         // $scope.running *= $scope.running;//
 
 
         }

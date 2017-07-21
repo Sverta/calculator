@@ -12,7 +12,7 @@ button {
     height: 50px;
     width: 50px;
     margin: 10px 4px;
-    box-shadow: inset 1px 1px 50px  #0066FF;
+    /*box-shadow: inset 1px 1px 50px  #0066FF;*/
     border: none !important;
 }
 *:focus {
@@ -25,8 +25,9 @@ button {
 .clearCalc {
     box-shadow: inset 1px 1px 50px  #CC6600;
     border: none;
+    text-align: center;
 }
-.equalsCalc{
+.equalsCalc {
     box-shadow: inset 1px 1px 50px #006633;
     border: none;
 }
@@ -51,4 +52,17 @@ button {
 .listOper {
     display: inline-flex;
     flex-direction: column;
+}
+.colorPannel > p{
+    font-size: 15px;
+    font-weight: bold;
+}
+.colorPannelCircle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 3px;
+}
+.colorPannelCircle {
+    display: inline-block;
 }
