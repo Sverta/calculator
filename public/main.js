@@ -14,7 +14,8 @@ calculatorApp.controller("numberController", function ($scope) {
         { number: 2},
         { number: 3},
         { number: 0},
-        { number: '00'}
+        { number: '00'},
+        { number: '.'}
     ];
     // $scope.colors = [
     //     {color: '#000'},
@@ -33,11 +34,15 @@ calculatorApp.controller("numberController", function ($scope) {
     // }
 
   //  $scope.backColorPannel = {'background-color':n.color};
+    calculator($scope);
+});
+
+function calculator($scope){
     $scope.output = 0;
     $scope.newNumber = true;
     $scope.pendingValue = null;
     $scope.runningadd = null;
-  //  $scope.summa = null;
+    //  $scope.summa = null;
     $scope.pendingOperation = null;
     $scope.running = null;
     // $scope.res = 0;
@@ -49,12 +54,9 @@ calculatorApp.controller("numberController", function ($scope) {
         } else {
             $scope.output += String(num);
         }
-
-        // if ($scope.pendingValue){
-        // }
         $scope.pendingValue = Number($scope.output);
 
-
+        console.log($scope.pendingValue);
     };
     $scope.clear = function () {
         $scope.output = 0;
@@ -96,11 +98,13 @@ calculatorApp.controller("numberController", function ($scope) {
         $scope.pendingValue = null;
         $scope.pendingOperation = '*';
     };
-    $scope.div = function () {
-        if ($scope.pendingValue) {
+    $scope.division = function () {
+        if ($scope.pendingValue != '0') {
             $scope.pendingValue = Number($scope.output);
             $scope.runningadd += $scope.pendingValue;
             $scope.running = ($scope.runningadd - $scope.pendingValue) / $scope.pendingValue;
+        } else {
+            $scope.running = 'Error';
         }
         $scope.newNumber = true;
         $scope.pendingValue = null;
@@ -130,11 +134,15 @@ calculatorApp.controller("numberController", function ($scope) {
             $scope.mul();
             $scope.res = $scope.running;
         }else if( $scope.pendingOperation == '/'){
-            $scope.div();
+            $scope.division();
             $scope.res = $scope.running;
         }
         $scope.output = $scope.res;
-        $scope.res = null;
+        $scope.res += $scope.res;
         //$scope.running = null;
     }
+}
+
+document.addEventListener('ready', function () {
+    mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
 });

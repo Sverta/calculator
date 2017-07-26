@@ -12,5 +12,12 @@
   "devDependencies": {
     "lite-server": "^2.3.0",
     "webpack-devserver": "0.0.6"
+  },
+  "dependencies": {
+    "@material/button": "^0.3.10",
+    "@material/card": "^0.2.5",
+    "@material/form-field": "^0.2.10",
+    "@material/layout-grid": "^0.4.1",
+    "material-components-web": "^0.16.0"
   }
 }
