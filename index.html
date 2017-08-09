@@ -7,91 +7,14 @@
 </head>
 <body>
 <!--<div class="colorPannel">-->
-    <!--<p>Change color calculator</p>-->
-    <!--<span ng-repeat="n in colors" class="colorPannelCircle" ng-style="styleColor={'background-color': n.color}" ng-click="color()"></span>-->
+<!--<p>Change color calculator</p>-->
+<!--<span ng-repeat="n in colors" class="colorPannelCircle" ng-style="styleColor={'background-color': n.color}" ng-click="color()"></span>-->
 <!--</div>-->
 
 
-<div class="mdc-card allCalc">
-        <div class=" allCalc-textfield mdc-textfield mdc-textfield--box mdc-textfield--disabled">
-            <input type="number" class="mdc-textfield__input" id="css-only-textfield-box" placeholder="{{$ctrl.output}}">
-        </div>
-        <div class="mdc-layout-grid">
-            <div class="mdc-layout-grid__inner">
-                <div class="mdc-layout-grid__cell--span-4">
-                    <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple" ng-click="clear()">
-                        AC
-                    </button>
-                </div>
-                <div class="mdc-layout-grid__cell--span-4">
-                    <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple"  ng-click="division()">
-                        &#177;
-                    </button>
-                </div>
-                <div class="mdc-layout-grid__cell--span-4">
-                    <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple" ng-click="mul()">
-                        &#215;
-                    </button>
-                </div>
-                <div class="mdc-layout-grid__cell--span-4">
-                     <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple"  ng-click="">
-                        &#8730;
-                    </button>
-                </div>
-            </div>
-
-            <innercalc></innercalc>
-            <!--<div class="mdc-layout-grid__inner">-->
-                <!--<div class="mdc-layout-grid__cell&#45;&#45;span-4"  ng-repeat="item in items" ng-if="[$index]<=2">-->
-                    <!--<button class="mdc-button mdc-button&#45;&#45;raised mdc-button&#45;&#45;primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple"  ng-click="calc(item.number)">-->
-                        <!--{{main.number(main)}}-->
-                    <!--</button>-->
-                <!--</div>-->
-                <!--<div class="mdc-layout-grid__cell&#45;&#45;span-4">-->
-                    <!--<button class="mdc-button mdc-button&#45;&#45;raised mdc-button&#45;&#45;primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple" ng-click="minus()">-->
-                        <!-- - -->
-                    <!--</button>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mdc-layout-grid__inner">-->
-                <!--<div  class="mdc-layout-grid__cell&#45;&#45;span-4"  ng-repeat="item in items"  ng-if="[$index]>2 && [$index]<=5">-->
-                    <!--<button  class="mdc-button mdc-button&#45;&#45;raised mdc-button&#45;&#45;primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple"  ng-click="numberOutput(item.number)">-->
-                        <!--{{item.number}}-->
-                    <!--</button>-->
-                <!--</div>-->
-                <!--<div class="mdc-layout-grid__cell&#45;&#45;span-4">-->
-                    <!--<button class="mdc-button mdc-button&#45;&#45;raised mdc-button&#45;&#45;primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple" ng-click="calc.sum(item.number)">-->
-                        <!--+-->
-                    <!--</button>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mdc-layout-grid__inner">-->
-                <!--<div  class="mdc-layout-grid__cell&#45;&#45;span-4"  ng-repeat="item in items"  ng-if="[$index]>5 && [$index]<=8">-->
-                    <!--<button  class="mdc-button mdc-button&#45;&#45;raised mdc-button&#45;&#45;primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple"  ng-click="numberOutput(item.number)">-->
-                        <!--{{item.number}}-->
-                    <!--</button>-->
-                <!--</div>-->
-                <!--<div class="mdc-layout-grid__cell&#45;&#45;span-4">-->
-                    <!--<button class="mdc-button mdc-button&#45;&#45;raised mdc-button&#45;&#45;primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple" ng-click="division()">-->
-                        <!--/-->
-                    <!--</button>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="mdc-layout-grid__inner">-->
-                <!--<div  class="mdc-layout-grid__cell&#45;&#45;span-4"  ng-repeat="item in items"  ng-if="[$index]>8">-->
-                    <!--<button  class="mdc-button mdc-button&#45;&#45;raised mdc-button&#45;&#45;primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple"  ng-click="numberOutput(item.number)">-->
-                        <!--{{item.number}}-->
-                    <!--</button>-->
-                <!--</div>-->
-                <!--<div class="mdc-layout-grid__cell&#45;&#45;span-4">-->
-                    <!--<button class="mdc-button mdc-button&#45;&#45;raised mdc-button&#45;&#45;primary mdc-ripple-upgraded mdc-btn" data-mdc-auto-init="MDCRipple" ng-click="result()">-->
-                        <!--=-->
-                    <!--</button>-->
-                <!--</div>-->
-            <!--</div>-->
-        </div>
+<div class="mdc-card allCalc" >
+    <innercalc></innercalc>
 </div>
-
 
 <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
 <script>mdc.autoInit()</script>

@@ -1,6 +1,7 @@
 /*material design*/
 .mdc-layout-grid__inner {
     margin: auto !important;
+    display: inline-flex !important;
 }
 
 body{
