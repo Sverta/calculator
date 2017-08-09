@@ -1,0 +1,87 @@
+<div class=" allCalc-textfield mdc-textfield mdc-textfield--box mdc-textfield--disabled">
+    <input type="number" class="mdc-textfield__input" id="css-only-textfield-box input-number" keypressEvents placeholder="{{$ctrl.output}}">
+</div>
+<div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.clear()">
+                AC
+            </button>
+        </div>
+        <div class="mdc-layout-grid__cell--span">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.sign()">
+                &#177;
+            </button>
+        </div>
+        <div class="mdc-layout-grid__cell--span">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.mul()">
+                &#215;
+            </button>
+        </div>
+        <div class="mdc-layout-grid__cell--span">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.square()">
+                &#8730;
+            </button>
+        </div>
+    </div>
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span" ng-repeat="item in $ctrl.list" ng-if="[$index]<=2">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.numberOutput(item.number)">
+                {{item.number}}
+            </button>
+        </div>
+        <div class="mdc-layout-grid__cell--span">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.minus()">
+                -
+            </button>
+        </div>
+    </div>
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span" ng-repeat="item in $ctrl.list" ng-if="[$index]>2 && [$index]<=5">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.numberOutput(item.number)">
+                {{item.number}}
+            </button>
+        </div>
+        <div class="mdc-layout-grid__cell--span">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.sum()">
+                +
+            </button>
+        </div>
+    </div>
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span" ng-repeat="item in $ctrl.list" ng-if="[$index]>5 && [$index]<=8">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.numberOutput(item.number)">
+                {{item.number}}
+            </button>
+        </div>
+        <div class="mdc-layout-grid__cell--span">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.division()">
+                /
+            </button>
+        </div>
+    </div>
+    <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span" ng-repeat="item in $ctrl.list" ng-if="[$index]>8">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.numberOutput(item.number)">
+                {{item.number}}
+            </button>
+        </div>
+        <div class="mdc-layout-grid__cell--span">
+            <button class="mdc-button mdc-button--raised mdc-button--primary mdc-ripple-upgraded mdc-btn"
+                    data-mdc-auto-init="MDCRipple" ng-click="$ctrl.result()">
+                =
+            </button>
+        </div>
+    </div>
+</div>
